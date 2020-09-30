@@ -1,0 +1,45 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;restful-server&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../pubsub" />
+      <root url="file://$PROJECT_DIR$/../cmd" />
+      <root url="file://$PROJECT_DIR$/../pair" />
+      <root url="file://$PROJECT_DIR$/../models" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../pair_recieve" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../websocket-server" />
+      <root url="file://$PROJECT_DIR$/../monitoring_client" />
+      <root url="file://$PROJECT_DIR$/../monitoring_server" />
+      <root url="file://$PROJECT_DIR$/../nanocat" />
+      <root url="file://$PROJECT_DIR$/../nanomsg_pub" />
+      <root url="file://$PROJECT_DIR$/../my-static-site" />
+      <root url="file://$PROJECT_DIR$/../network" />
+      <root url="file://$PROJECT_DIR$/../grideye-website" />
+      <root url="file://$PROJECT_DIR$/../seek" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../pubsub" />
+      <root url="file://$PROJECT_DIR$/../cmd" />
+      <root url="file://$PROJECT_DIR$/../pair" />
+      <root url="file://$PROJECT_DIR$/../models" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../pair_recieve" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../websocket-server" />
+      <root url="file://$PROJECT_DIR$/../monitoring_client" />
+      <root url="file://$PROJECT_DIR$/../monitoring_server" />
+      <root url="file://$PROJECT_DIR$/../nanocat" />
+      <root url="file://$PROJECT_DIR$/../nanomsg_pub" />
+      <root url="file://$PROJECT_DIR$/../my-static-site" />
+      <root url="file://$PROJECT_DIR$/../network" />
+      <root url="file://$PROJECT_DIR$/../grideye-website" />
+      <root url="file://$PROJECT_DIR$/../seek" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

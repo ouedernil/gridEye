@@ -1,0 +1,36 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;nanocat&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../pair" />
+      <root url="file://$PROJECT_DIR$/../monitoring_client" />
+      <root url="file://$PROJECT_DIR$/../monitoring_server" />
+      <root url="file://$PROJECT_DIR$/../my-static-site" />
+      <root url="file://$PROJECT_DIR$/../network" />
+      <root url="file://$PROJECT_DIR$/../seek" />
+      <root url="file://$PROJECT_DIR$/../grideye-site" />
+      <root url="file://$PROJECT_DIR$/../pubsub" />
+      <root url="file://$PROJECT_DIR$/../cmd" />
+      <root url="file://$PROJECT_DIR$/../go-server" />
+      <root url="file://$PROJECT_DIR$/../models" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../pair" />
+      <root url="file://$PROJECT_DIR$/../monitoring_client" />
+      <root url="file://$PROJECT_DIR$/../monitoring_server" />
+      <root url="file://$PROJECT_DIR$/../my-static-site" />
+      <root url="file://$PROJECT_DIR$/../network" />
+      <root url="file://$PROJECT_DIR$/../seek" />
+      <root url="file://$PROJECT_DIR$/../grideye-site" />
+      <root url="file://$PROJECT_DIR$/../pubsub" />
+      <root url="file://$PROJECT_DIR$/../cmd" />
+      <root url="file://$PROJECT_DIR$/../go-server" />
+      <root url="file://$PROJECT_DIR$/../models" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-------------------------------------Lib------------------------------------------>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- JQuery -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+    <!-- AutobahnJS -->
+    <script src="js/autobahn.min.js"></script>
+    <!-- AngularWAMP -->
+    <script src="js/angular-wamp.min.js"></script>
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/measures.js"></script>
+
+</head>
+<body ng-app="www4gridApp" ng-controller="ctrl">
+<div class="grid">
+    <div class="row">
+        <nav class="navbar navbar-inverse">
+            <a class="navbar-brand">
+                <img class="banner " src="css/images/grideye_logo.png" alt="grideye-logo">
+            </a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuNavBar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="menuNavBar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="measures.html"><font color="#A5CB6E">Measures</font></a></li>
+                    <li><a href="alarm.html">Alarm</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Parameters<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="network.html">Network</a></li>
+                            <li><a href="gsm.html">GSM</a></li>
+                            <li><a href="freq&alarms.html">Frequency-alarms</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 text-center version-title">
+                <h4 id="titleLabel">Measures monitor</h4>
+            </div>
+
+        </nav>
+    </div>
+    <div class="row">
+        <div class="container-fluid ">
+            <div class="text-center">
+                Server status: <label ng-style="customStyle.style">{{errorMsg}}</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container tableContainer text-center">
+        <div>
+            <h4 class="tableTitle">
+                Voltage
+            </h4>
+        </div>
+
+        <div>
+            <table class="table">
+                <h4>
+                    <a>{{measure_timestamp}}</a>
+                </h4>
+                <tr>
+                    <th class="col-xs-4">value</th>
+                    <th class="col-xs-4">min</th>
+                    <th class="col-xs-4">max</th>
+                </tr>
+                <tr ng-repeat="mu in u_measures">
+                    <td class="col-xs-4">{{mu.value}}</td>
+                    <td class="col-xs-4">{{mu.min}}</td>
+                    <td class="col-xs-4">{{mu.max}}</td>
+                </tr>
+            </table>
+        </div>
+        </table>
+    </div>
+</div>
+<div class="container tableContainer text-center">
+    <div>
+        <h4 class="tableTitle">
+            Current
+        </h4>
+    </div>
+    <div>
+        <table class="table">
+            <h4>
+                <a>{{measure_timestamp}}</a>
+            </h4>
+            <tr>
+                <th class="col-xs-4">value</th>
+                <th class="col-xs-4">p max</th>
+                <th class="col-xs-4">n max</th>
+            </tr>
+            <tr ng-repeat="mi in i_measures">
+                <td>{{mi.value}}</td>
+                <td>{{mi.p_max}}</td>
+                <td>{{mi.n_max}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="container tableContainer text-center">
+    <h4 class="tableTitle">
+        Frequency
+    </h4>
+    <table class="table">
+        <h4>
+            <a>{{measure_timestamp}}</a>
+        </h4>
+        <tr>
+            <th class="col-xs-4">value</th>
+            <th class="col-xs-4">min</th>
+            <th class="col-xs-4">max</th>
+        </tr>
+        <tr ng-repeat="mf in f_measures">
+            <td>{{mf.value}}</td>
+            <td>{{mf.min}}</td>
+            <td>{{mf.max}}</td>
+        </tr>
+    </table>
+</div>
+<div class="container tableContainer text-center">
+    <h4 class="tableTitle">
+        Real Energy
+    </h4>
+    <table class="table">
+        <h4>
+            <a>{{measure_timestamp}}</a>
+        </h4>
+        <tr>
+            <th class="col-xs-6">p value</th>
+            <th class="col-xs-6">n value</th>
+        </tr>
+        <tr ng-repeat="me_real in e_real_measures">
+            <td>{{me_real.p_value}}</td>
+            <td>{{me_real.n_value}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container tableContainer text-center">
+    <h4 class="tableTitle">
+        Reactive Energy
+    </h4>
+    <table class="table">
+        <h4>
+            <a>{{measure_timestamp}}</a>
+        </h4>
+        <tr>
+            <th class="col-xs-6">p value</th>
+            <th class="col-xs-6">n value</th>
+        </tr>
+        <tr ng-repeat="me_react in e_react_measures">
+            <td>{{me_react.p_value}}</td>
+            <td>{{me_react.n_value}}</td>
+        </tr>
+    </table>
+
+</div>
+<div class="container tableContainer text-center">
+    <h4 class="tableTitle">
+        Total Harmonic Distortion
+    </h4>
+    <table class="table text-center">
+        <h4>
+            <a>{{measure_timestamp}}</a>
+        </h4>
+        <tr>
+            <th class="col-xs-4">value</th>
+            <th class="col-xs-4">min</th>
+            <th class="col-xs-4">max</th>
+        </tr>
+        <tr ng-repeat="mthds in thds_measures">
+            <td>{{mthds.value}}</td>
+            <td>{{mthds.min}}</td>
+            <td>{{mthds.max}}</td>
+        </tr>
+    </table>
+
+</div>
+</div>
+</body>
+</html>
+

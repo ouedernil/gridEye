@@ -1,0 +1,123 @@
+* {
+
+     box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand>img {
+    height: 100%;
+    width: auto;
+}
+#menuNavBar{
+    text-align: center;
+}
+
+.version-title{
+  padding: 15px;
+  padding-bottom: 30px;
+}
+
+.events-container{
+    font-size: 21px;
+}
+
+.main-container{
+	padding-top: 20px;
+
+}
+
+.events-grid{
+	font-size: 18px;
+    border: 40px;
+}
+
+.combobox-network{
+  width: 170px;
+}
+
+.grid-title{
+  background: #222222;
+  color:white;
+}
+
+.update-button{
+    background-color: #A5CB6E;
+    color: black;
+    border : solid #A5CB6E;
+    width:auto;
+    margin-top: 20px;
+}
+.div-button{
+    text-align: center;
+    margin-top: 40px;
+    display:block;
+}
+
+.panel-default>.panel-heading{
+    background-color: #222222;
+    color:white;
+}
+
+.accordeon-menu{
+    width:50%;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+}
+
+.field-title{
+    text-align: center;
+    font-size: 20px;
+}
+
+.measureFrequency{
+    width: 20%;
+    margin-bottom: 40px;
+}
+
+.updateFrequency-button{
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+th{
+    text-align: center;
+}
+
+.toggle-enable{
+    padding-top:10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .accordeon-menu {
+        width: 100%;
+    }
+}
+
+#titleLabel{
+    color: white;
+}
+
+.tableTitle{
+    padding: 5px;
+    color: white;
+    background-color:#222222 ;
+}
+
+.tableContainer{
+    width: 50%;
+}
+
+.network-container{
+    margin-top: 20px;
+}

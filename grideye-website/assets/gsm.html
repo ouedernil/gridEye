@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-------------------------------------Lib------------------------------------------>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- JQuery -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+    <!-- Toggle Button-->
+    <script src="js/angular-bootstrap-toggle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/angular-bootstrap-toggle.min.css">
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/gsm.js"></script>
+
+
+</head>
+<body ng-app="www4gridApp" ng-controller="ctrl">
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-inverse">
+            <a class="navbar-brand">
+                <img class="banner " src="css/images/grideye_logo.png" alt="grideye-logo">
+            </a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuNavBar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="menuNavBar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="measures.html">Measures</a></li>
+                    <li><a href="alarm.html">Alarm</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><font
+                                color="#A5CB6E">Parameters</font><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="network.html">Network</a></li>
+                            <li><a href="gsm.html"><font color="#A5CB6E">GSM</font></a></li>
+                            <li><a href="freq&alarms.html">Frequency-alarms</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 text-center version-title">
+                <h4 id="titleLabel">GSM configuration</h4>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="container-fluid ">
+            <div class="text-center">
+                Server status: <label ng-style="customStyle.style">{{errorMsg}}</label>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="container col-xs-12">
+            <div class="container tableContainer text-center">
+                <h4 class="tableTitle">
+                    Enable/disable GSM
+                </h4>
+            </div>
+            <div class="row">
+                GSM is {{endis}}
+            </div>
+            <div class="row toggle-enable">
+                <toggle ng-model="toggleValue" ng-change="statusChanged()" on="ON" off="OFF"
+                        onstyle="btn-success"></toggle>
+            </div>
+        </div>
+        <div class="container col-xs-12 ">
+            <div class="container tableContainer text-center">
+                <h4 class="tableTitle">
+                    Update PIN code
+                </h4>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 text-right">
+                    <p class="interfaces-label">Current PIN</p>
+                </div>
+                <div class="col-xs-12 col-md-6 text-left">
+                    <input class="input-sm" type="text" ng-model="currentCodeTextInput"></input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 text-right">
+                    <p class="interfaces-label">New PIN</p>
+                </div>
+                <div class="col-xs-12 col-md-6 text-left">
+                    <input class="input-sm" type="text" ng-model="newPinCodeTextInput"></input>
+                </div>
+            </div>
+            <div class="row">
+                <button ng-click="UpdatePin()" type="button" class="update-button btn btn-primary">
+                    Update
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container col-xs-12">
+        <div class="container tableContainer text-center">
+            <h4 class="tableTitle">
+                Update APN
+            </h4>
+        </div>
+        <div class="row text-center">
+            <div class="col-xs-12 col-md-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 text-right">
+                <p class="interfaces-label">Current APN</p>
+            </div>
+            <div class="col-xs-12 col-md-6 text-left">
+                <label>{{currentApnText}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 text-right">
+                <p class="interfaces-label">Enter new APN</p>
+            </div>
+            <div class="col-xs-12 col-md-6 text-left">
+                <input class="input-sm" type="text" ng-model="apnTextInput"></input>
+            </div>
+        </div>
+            <div class="row text-center">
+                <button ng-click="UpdateApn()" type="button" class="update-button btn btn-primary">
+                    Update
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

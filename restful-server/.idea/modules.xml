@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../grideye-webserver/.idea/go-server-server-generated-2.iml" filepath="$PROJECT_DIR$/../grideye-webserver/.idea/go-server-server-generated-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../restful-server/.idea/restful-server.iml" filepath="$PROJECT_DIR$/../restful-server/.idea/restful-server.iml" />
+    </modules>
+  </component>
+</project>

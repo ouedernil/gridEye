@@ -1,0 +1,20 @@
+@media screen and (min-width: 768px) {
+    .interfaces-label {
+        display: inline;
+        text-align: right;
+    }
+
+    .interfaces-input{
+        text-align: left;
+    }
+}
+
+
+.network-container{
+  text-align: center;
+}
+
+.network-fields{
+	margin-bottom: 20px;
+}
+
